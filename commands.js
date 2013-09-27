@@ -16,7 +16,7 @@ module.exports = [
         command: "/opt/vc/bin/vcgencmd measure_temp",
         regex: /=([0-9\.]*)'C/,
         data: [parseFloat],
-        deviceId: 513
+        deviceId: 511
     },
     {
         name: 'RAM Usage',
