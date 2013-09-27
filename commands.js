@@ -23,8 +23,8 @@ module.exports = [
         command: 'cat /proc/meminfo',
         deviceId: 523,
         data: [function(result) {
-            var total = parseInt(result.match(/MemTotal:\s*(\d*) kB/));
-            var free = parseInt(result.match(/MemFree:\s*(\d*) kB/));
+            var total = parseInt(result.match(/MemTotal:\s*(\d*) kB/)[1]);
+            var free = parseInt(result.match(/MemFree:\s*(\d*) kB/)[1]);
 
             return 100 - ((free/total)* 100);
         }]
